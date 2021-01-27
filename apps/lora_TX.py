@@ -3,8 +3,9 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Lora Tx
-# Generated: Tue Feb 18 17:01:26 2020
+# Generated: Wed Jan 27 18:33:28 2021
 ##################################################
+
 
 from gnuradio import blocks
 from gnuradio import eng_notation
@@ -26,28 +27,28 @@ class lora_TX(gr.top_block):
         ##################################################
         # Variables
         ##################################################
-        self.bw = bw = 250000
+        self.bw = bw = 125000
         self.sf = sf = 7
         self.samp_rate = samp_rate = bw
         self.n_frame = n_frame = 200
         self.impl_head = impl_head = False
-        self.has_crc = has_crc = False
+        self.has_crc = has_crc = True
         self.frame_period = frame_period = 200
         self.cr = cr = 4
-        self.TX_gain = TX_gain = 3
+        self.TX_gain = TX_gain = 30
 
         ##################################################
         # Blocks
         ##################################################
         self.uhd_usrp_sink_0 = uhd.usrp_sink(
-        	",".join(('', "addr=192.168.10.2")),
+        	",".join(('', '')),
         	uhd.stream_args(
         		cpu_format="fc32",
         		channels=range(1),
         	),
         )
         self.uhd_usrp_sink_0.set_samp_rate(samp_rate)
-        self.uhd_usrp_sink_0.set_center_freq(915e6, 0)
+        self.uhd_usrp_sink_0.set_center_freq(433e6, 0)
         self.uhd_usrp_sink_0.set_gain(TX_gain, 0)
         self.uhd_usrp_sink_0.set_antenna('TX/RX', 0)
         self.uhd_usrp_sink_0.set_bandwidth(bw, 0)

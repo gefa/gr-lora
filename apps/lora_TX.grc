@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>3</value>
+      <value>30</value>
     </param>
   </block>
   <block>
@@ -132,7 +132,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>250000</value>
+      <value>125000</value>
     </param>
   </block>
   <block>
@@ -213,7 +213,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>False</value>
+      <value>True</value>
     </param>
   </block>
   <block>
@@ -708,7 +708,7 @@
     </param>
     <param>
       <key>center_freq0</key>
-      <value>915e6</value>
+      <value>433e6</value>
     </param>
     <param>
       <key>norm_gain0</key>
@@ -1356,7 +1356,7 @@
     </param>
     <param>
       <key>dev_args</key>
-      <value>"addr=192.168.10.2"</value>
+      <value></value>
     </param>
     <param>
       <key>_enabled</key>
