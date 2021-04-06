@@ -443,6 +443,10 @@ namespace gr {
                             CFOint = ceil(double(down_val-(int)m_number_of_bins)/2);
                             message_port_pub(pmt::intern("new_frame"),pmt::mp((long)((m_number_of_bins+CFOint)%m_number_of_bins)));
                         }
+                        #ifdef GRLORA_DEBUG
+                                  GR_LOG_DEBUG(this->d_logger,
+                       "DEBUG:CFOint:" + std::to_string(CFOint));
+                        #endif
                         items_to_consume = usFactor*m_samples_per_symbol/4+usFactor*CFOint;
                         symbol_cnt = 0;
                         m_state = FRAC_CFO_CORREC;
