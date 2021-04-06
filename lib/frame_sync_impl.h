@@ -1,7 +1,7 @@
 
 #ifndef INCLUDED_LORA_SDR_FRAME_SYNC_IMPL_H
 #define INCLUDED_LORA_SDR_FRAME_SYNC_IMPL_H
-// #define GRLORA_DEBUG
+#define GRLORA_DEBUG
 // #define GRLORA_MEASUREMENTS
 
 #include <lora_sdr/frame_sync.h>
